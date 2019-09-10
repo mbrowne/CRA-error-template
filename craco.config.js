@@ -1,8 +1,14 @@
-
 module.exports = {
-    // customize webpack config
-    webpack: {
-        // configure: webpackConfig => {
-        // }
-    }
+  babel: {
+    plugins: [
+      [
+        'babel-plugin-styled-components',
+        {
+          displayName: true,
+          transpileTemplateLiterals: true,
+          pure: true
+        }
+      ]
+    ]
+  }
 }

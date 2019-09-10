@@ -1,12 +1,9 @@
 import React from 'react'
 import './App.css'
+import { dummyExport } from './components'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">Hello world</header>
-    </div>
-  )
+console.log('dummyExport', dummyExport)
+
+export default function App() {
+  return <div className="App">Hello world</div>
 }
-
-export default App
