@@ -1,14 +1,15 @@
-import React from 'react'
 import styled from 'styled-components'
 
-const Wrapper = styled.div`
-  color: green;
+export const Component5 = styled.div`
+  color: inherit;
 `
 
-// This one isn't related to styled-components...there seems to be a general issue where
-// React.forwardRef() always breaks tree-shaking. If you render something other than
-// styled-components, it still doesn't tree-shake.
-export const Component5 = React.forwardRef((props, ref) => {
-  console.log('ref: ', ref)
-  return <Wrapper>Component5</Wrapper>
-})
+const helper = size => `${size}rem`
+
+const widthUnits = 'px'
+
+/* eslint no-unused-vars: off */
+const OtherComponent = styled(Component5)`
+  font-size: ${helper(2)};
+  width: ${`50${widthUnits}`};
+`
